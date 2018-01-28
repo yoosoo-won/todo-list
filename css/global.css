@@ -1,0 +1,16 @@
+@charset "UTF-8";
+html,body,div,span,h1,h2,h3,h4,h5,h6, ul, li, button{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    font-size: 13px;
+    background-color: #FAFAFA;
+}
+ul, li, button {
+    background-color: transparent;
+    list-style: none;
+}
+button {cursor: pointer}
+input {border:0; margin:0; padding:0;}

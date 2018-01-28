@@ -1,0 +1,119 @@
+.hide {display: none;}
+.input input{width: 100%;}
+html, body, #app{height: 100%;}
+
+#header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 20px #000;
+    z-index: 1000;
+}
+#header .header-section {
+    display: inline-block;
+    width: 542px;
+}
+#header .header-section .status-bar-section {
+    background-color: #000000;
+}
+#header .header-section .status-bar-section #process {
+    background-color: #0000ff;
+    width: 0;
+    height: 1px;
+}
+#header .header-section .input-section {
+    position: relative;
+}
+#header .header-section .input-section .input-group {
+    margin-right: 40px;
+}
+#header .header-section .input-section #input-todo {
+    width: 100%;
+}
+#header .header-section .input-section .add-todo-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+}
+#header .header-section .tabs-section {
+    background-color: #bbb;
+    font-size: 0;
+}
+#header .header-section .tabs-section .btn-section {
+    display: inline-block;
+    width: 50%;
+}
+#header .header-section .tabs-section .btn-section button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
+#container {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    bottom: 41px;
+    margin-left: -266px;
+    overflow: scroll;
+}
+#container .todo-list-section {
+
+}
+#container .todo-list-section .todo-list {
+
+}
+
+#container .todo-item-container {
+    padding-right: 10px;
+}
+#container .todo-item-container .item {
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    border: 1px solid #BBBBBB;
+    margin: 5px 0;
+    padding: 10px;
+    box-shadow: 3px 7px 5px 1px #BBBBBB;
+    border-radius: 5px;
+}
+#container .todo-item-container .item img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    border-radius: 50%;
+}
+#container .todo-item-container .item .info {
+    padding-left: 60px;
+    padding-right: 55px;
+}
+#container .todo-item-container .item .info span {
+    display: block;
+}
+#container .todo-item-container .item .info .regi-date {
+    font-weight: bold;
+}
+#container .todo-item-container .item .info .do-txt {
+    width: 395px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#container .todo-item-container .item .info .btn-group {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    margin-top: -8px;
+}
+#container .todo-item-container .item .info .btn-group .done-btn{
+    margin-right: 5px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

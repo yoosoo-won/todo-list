@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="css/global.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <title>Todo List</title>
+</head>
+<body>
+  <div id="app">
+    <div id="header">
+      <div class="header-section">
+        <h1>TO DO LIST</h1>
+        <div class="status-bar-section">
+          <div id="process"></div>
+        </div>
+        <div class="input-section">
+          <div class="input-group">
+            <label class="hide" for="input-todo">할 일을 입력하세요.</label>
+            <input type="text" id="input-todo" placeholder="할 일을 입력하세요">
+          </div>
+          <button type="button" class="add-todo-btn">할일추가</button>
+        </div>
+        <div class="tabs-section">
+          <div class="btn-section">
+            <button type="button" class="filter-todo-btn">TO DO <span class="todo-count">-</span></button>
+          </div>
+          <div class="btn-section">
+            <button type="button" class="filter-done-btn">DONE <span class="done-count">-</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="todo-list-section"></div>
+    </div>
+    <div id="footer">
+      <p>Create by Yoosoo Won</p>
+    </div>
+  </div>
+<script src="js/core/model.js"></script>
+<script src="js/core/collection.js"></script>
+<script src="js/core/view.js"></script>
+<script src="js/components/todo-item.js"></script>
+<script src="js/components/todo-list.js"></script>
+<script src="js/index.js"></script>
+<script>
+  'use strict';
+  var app = new App();
+  app.render();
+</script>
+</body>
+</html>
