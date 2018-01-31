@@ -26,7 +26,9 @@
   View.prototype.initEl = function() {
     if (this.tagName) {
       this.el = document.createElement(this.tagName);
-      this.el.className = this.className;
+      if (this.className) {
+        this.el.className = this.className
+      }
     } else {
       this.el = this.getSelectorElement(this.el);
     }
@@ -38,12 +40,13 @@
   };
   View.prototype.registerHandlers = function() {
     var handlers = this.handlers || [];
+    var i = 0;
     var len = handlers.length;
     var selector;
     var event;
     var fn;
 
-    for (var i = 0; i < len; i++) {
+    for (; i < len; i++) {
       selector = this.getSelectorElement(this.el, handlers[i][0]);
       event = handlers[i][1];
       fn = handlers[i][2];
@@ -55,12 +58,13 @@
   };
   View.prototype.unregisterHandlers = function() {
     var handlers = this.handlers || [];
+    var i = 0;
     var len = handlers.length;
     var selector;
     var event;
     var fn;
 
-    for (var i = 0; i < len; i++) {
+    for (; i < len; i++) {
       selector = this.getSelectorElement(this.el, handlers[i][0]);
       event = handlers[i][1];
       fn = handlers[i][2];
@@ -71,12 +75,12 @@
     }
   };
   View.prototype.bindEvents = function(selector, event, fn) {
+    var i = 0;
     var len = selector.length;
-
     this.unbindEvents(selector, event, fn);
 
     if (len) {
-      for (var i = 0; i < len; i++) {
+      for (; i < len; i++) {
         selector[i].addEventListener(event, fn);
       }
     } else {
@@ -84,10 +88,11 @@
     }
   };
   View.prototype.unbindEvents = function(selector, event, fn) {
+    var i = 0;
     var len = selector.length;
 
     if (len) {
-      for (var i = 0; i < len; i++) {
+      for (; i < len; i++) {
         selector[i].removeEventListener(event, fn);
       }
     } else {
